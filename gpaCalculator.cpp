@@ -16,7 +16,6 @@ int main(){
     const char stipulation = 'Q';
     const char stipulation2 = 'q';
     char answer = 'a';
-    // int courseCount = 0;
     int coursePoints = 0;
     int totalCoursePoints = 0;
 
@@ -32,21 +31,22 @@ int main(){
         std::cout << "How many credits is the course worth?" << std::endl;
         std::cin >> additional_credits;
         credits += additional_credits;
-        std::cout << "total credits: " <<credits << std::endl;
+        // std::cout << "total credits: " <<credits << std::endl;
 
         std::cout << "What was your GPA in the course?" << std::endl;
         std::cin >> additional_gpa;
         totalCoursePoints += additional_gpa * additional_credits;
-        std::cout << "Total Course Points: " << totalCoursePoints << std::endl;
+        // std::cout << "Total Course Points: " << totalCoursePoints << std::endl;
 
         std::cout << "would you like to continue or quit?" << std::endl;
         std::cin >> answer;
 
     };
     
-    // Calculate and display the final GPA
-    std::cout << "Your final Communalitive GPA is: " << std::endl;
+    // Calculate the final GPA
+    // std::cout << "Your final Communalitive GPA is: " << std::endl;
     float finalGPA = calculateGPA(totalCoursePoints, credits);
+    //display the final GPA with a set precision of 2 places after the decimal
     std::cout << "Your final Communalitive GPA is: " 
               << std::fixed << std::setprecision(2) << finalGPA 
               << std::endl;
